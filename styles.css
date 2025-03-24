@@ -37,9 +37,10 @@ body {
 }
 
 .left-box {
-  flex: 1;
-
+  margin: 20px;
   padding: 50px;
+
+  flex: 1;
 
   /* to see layout */
   border: 0.1px solid black;
@@ -47,11 +48,15 @@ body {
 
 .left-box-column {
   color: hsl(300, 43%, 22%);
-  width: 60%;
+
+  /* now that you introduced margin for left-box 
+  you could remove width
+  */
+  /* width: 60%; */
 
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .left-box-column span {
@@ -67,10 +72,51 @@ body {
 }
 
 .right-box {
+  margin: 20px;
+  padding: 50px;
+
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.5rem;
 
   /* to see layout */
   border: 0.1px solid black;
+}
+
+.first-long-box {
+  background-color: hsl(333, 80%, 95%);
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+
+  align-self: flex-start;
+
+  font-size: small;
+}
+
+.second-long-box {
+  background-color: hsl(333, 80%, 95%);
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+
+  align-self: center;
+
+  font-size: small;
+}
+
+.third-long-box {
+  background-color: hsl(333, 80%, 95%);
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+
+  align-self: flex-end;
+
+  font-size: small;
 }
 
 .bottom-container {
