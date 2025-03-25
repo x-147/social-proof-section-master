@@ -135,15 +135,40 @@ body {
 /* BOTTOM CONTAINER  */
 
 .bottom-container {
-  flex: 1;
   /* fixed height to allow flex movements within the height? */
-  heigth: 250px;
+  height: 250px;
 
   display: flex;
-  justify-content: space-between;
+  /* this is leaving tiny space between card and parent */
+  justify-content: space-around;
+  /* for consistent spacing on wrap, desired effect 
+  only in conjunction with space-around or space-evenly
+  */
+  gap: 20px;
+
+  flex: 1;
+  flex-wrap: wrap;
 
   /* to see layout */
   border: 0.1px solid black;
+}
+
+.card-container-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card-container-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-container-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .card {
@@ -156,7 +181,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 
   color: white;
   background-color: hsl(300, 43%, 22%);
