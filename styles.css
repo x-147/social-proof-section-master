@@ -48,9 +48,6 @@ body {
   flex: 1;
 
   color: hsl(300, 43%, 22%);
-
-  /* to see layout */
-  border: 0.1px solid black;
 }
 
 .left-box span {
@@ -80,9 +77,6 @@ body {
   gap: 1.2rem;
 
   flex: 1;
-
-  /* to see layout */
-  border: 0.1px solid black;
 }
 
 .icon-star {
