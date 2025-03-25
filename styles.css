@@ -221,3 +221,18 @@ body {
   font-weight: 400;
   line-height: 1rem;
 }
+
+@media (max-width: 944px) {
+  .main-container {
+    /* width: auto; */
+    overflow: scroll;
+  }
+
+  .left-box span {
+    width: auto;
+  }
+
+  .left-box p {
+    width: auto;
+  }
+}
