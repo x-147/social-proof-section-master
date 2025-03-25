@@ -223,9 +223,21 @@ body {
 }
 
 @media (max-width: 944px) {
-  .main-container {
-    /* width: auto; */
+  body {
     overflow: scroll;
+  }
+
+  .top-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .left-box {
+    width: 275px;
+  }
+
+  .right-box {
+    width: 275px;
   }
 
   .left-box span {
