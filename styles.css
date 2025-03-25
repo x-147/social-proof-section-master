@@ -41,7 +41,7 @@ body {
 
 .left-box {
   margin: 20px 5px 20px 20px;
-  width: 50%;
+  width: 430px;
 
   display: flex;
   flex-direction: column;
@@ -56,23 +56,24 @@ body {
   font-weight: 700;
   line-height: 2rem;
   /* this is ideal? */
-  width: 75%;
+  width: 50%;
+  opacity: 0.85;
 }
 
 .left-box p {
   font-size: small;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2rem;
   opacity: 0.6;
   text-align: start;
   /* this is ideal? */
-  width: 90%;
+  width: 75%;
 }
 
 .right-box {
-  margin: 20px 20px 20px 5px;
+  margin: 20px 0px 20px 0px;
   /* absolute value prevents right box from shrinking */
-  width: 330px;
+  width: 430px;
 
   display: flex;
   flex-direction: column;
@@ -110,7 +111,7 @@ body {
 
   /* absolute value prevents long box from shrinking */
   /* give same width along with align items for stagger */
-  width: 275px;
+  width: 280px;
 
   color: hsl(300, 43%, 22%);
   font-weight: 600;
