@@ -27,6 +27,8 @@ body {
   flex-direction: column;
 }
 
+/* TOP CONTAINER  */
+
 /* parent for left and right box */
 .top-container {
   flex: 1;
@@ -129,9 +131,37 @@ body {
   align-self: flex-end;
 }
 
+/* BOTTOM CONTAINER  */
+
 .bottom-container {
   flex: 1;
 
+  display: flex;
+
   /* to see layout */
   border: 0.1px solid black;
+}
+
+.card {
+  width: 235px;
+  height: 300px;
+  padding: 20px;
+
+  border-radius: 5px;
+
+  color: white;
+  background-color: hsl(300, 43%, 22%);
+}
+
+.customer .verified-buyer {
+  color: hsl(333, 80%, 67%);
+}
+
+.customer img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.customer .name {
 }
