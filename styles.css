@@ -18,7 +18,7 @@ body {
 }
 
 .main-container {
-  width: 60%;
+  width: 73%;
   height: 500px;
   /* background-color: hsl(300, 24%, 96%); */
   background-color: white;
@@ -135,26 +135,49 @@ body {
 
 .bottom-container {
   flex: 1;
+  /* fixed height to allow flex movements within the height? */
+  heigth: 250px;
 
   display: flex;
+  justify-content: space-between;
 
   /* to see layout */
   border: 0.1px solid black;
 }
 
 .card {
-  width: 235px;
-  height: 300px;
+  width: 265px;
+  height: 180px;
   padding: 20px;
 
   border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 
   color: white;
   background-color: hsl(300, 43%, 22%);
 }
 
+.customer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.customer .name {
+  font-size: small;
+  font-weight: 600;
+}
+
 .customer .verified-buyer {
   color: hsl(333, 80%, 67%);
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 0.7;
 }
 
 .customer img {
@@ -163,5 +186,13 @@ body {
   border-radius: 50%;
 }
 
-.customer .name {
+.customer .badge {
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  font-size: small;
+  font-weight: 400;
+  line-height: 1rem;
 }
