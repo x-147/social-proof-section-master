@@ -39,13 +39,12 @@ body {
 
 .left-box {
   margin: 20px 5px 20px 20px;
+  width: 50%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-
-  flex: 1;
 
   color: hsl(300, 43%, 22%);
 }
@@ -70,13 +69,13 @@ body {
 
 .right-box {
   margin: 20px 20px 20px 5px;
+  /* absolute value prevents right box from shrinking */
+  width: 330px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.2rem;
-
-  flex: 1;
 }
 
 .icon-star {
@@ -85,48 +84,17 @@ body {
 }
 
 .star-container {
+  flex-shrink: 0;
 }
 
-.first-long-box {
-  background-color: hsl(333, 80%, 95%);
-
-  padding: 10px 40px 10px 14px;
-  border-radius: 5px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  /* give same width so the staggered is equal */
-  width: 88%;
-  align-self: start;
-
-  color: hsl(300, 43%, 22%);
-  font-weight: 600;
-  font-size: small;
+.first-long-box > span,
+.second-long-box > span,
+.third-long-box > span {
+  flex-shrink: 0;
 }
 
-.second-long-box {
-  background-color: hsl(333, 80%, 95%);
-
-  padding: 10px 40px 10px 14px;
-  border-radius: 5px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  /* give same width so the staggered is equal */
-  width: 88%;
-  align-self: center;
-
-  color: hsl(300, 43%, 22%);
-  font-weight: 600;
-  font-size: small;
-}
-
+.first-long-box,
+.second-long-box,
 .third-long-box {
   background-color: hsl(333, 80%, 95%);
 
@@ -134,17 +102,31 @@ body {
   border-radius: 5px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+
   gap: 1rem;
 
-  /* give same width so the staggered is equal */
-  width: 88%;
-  align-self: flex-end;
+  /* absolute value prevents long box from shrinking */
+  /* give same width along with align items for stagger */
+  width: 275px;
 
   color: hsl(300, 43%, 22%);
   font-weight: 600;
   font-size: small;
+}
+
+/* stagger the boxes */
+
+.first-long-box {
+  align-self: start;
+}
+
+.second-long-box {
+  align-self: center;
+}
+
+.third-long-box {
+  align-self: flex-end;
 }
 
 .bottom-container {
