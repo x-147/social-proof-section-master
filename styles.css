@@ -27,6 +27,7 @@ body {
   flex-direction: column;
 }
 
+/* parent for left and right box */
 .top-container {
   flex: 1;
 
@@ -37,85 +38,118 @@ body {
 }
 
 .left-box {
-  margin: 20px;
-  padding: 50px;
+  margin: 20px 5px 20px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 
   flex: 1;
+
+  color: hsl(300, 43%, 22%);
 
   /* to see layout */
   border: 0.1px solid black;
 }
 
-.left-box-column {
-  color: hsl(300, 43%, 22%);
-
-  /* now that you introduced margin for left-box 
-  you could remove width
-  */
-  /* width: 60%; */
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.left-box-column span {
+.left-box span {
   font-size: xx-large;
   font-weight: 700;
+  line-height: 2rem;
+  /* this is ideal? */
+  width: 75%;
 }
 
-.left-box-column p {
+.left-box p {
   font-size: small;
   font-weight: 300;
-  line-height: 1rem;
+  line-height: 1.2rem;
   opacity: 0.6;
+  text-align: start;
+  /* this is ideal? */
+  width: 90%;
 }
 
 .right-box {
-  margin: 20px;
-  padding: 50px;
-
-  flex: 1;
+  margin: 20px 20px 20px 5px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 1.2rem;
+
+  flex: 1;
 
   /* to see layout */
   border: 0.1px solid black;
+}
+
+.icon-star {
+  width: 7px;
+  height: 7px;
+}
+
+.star-container {
 }
 
 .first-long-box {
   background-color: hsl(333, 80%, 95%);
-  width: 75%;
-  padding: 10px;
+
+  padding: 10px 40px 10px 14px;
   border-radius: 5px;
 
-  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
+  /* give same width so the staggered is equal */
+  width: 88%;
+  align-self: start;
+
+  color: hsl(300, 43%, 22%);
+  font-weight: 600;
   font-size: small;
 }
 
 .second-long-box {
   background-color: hsl(333, 80%, 95%);
-  width: 75%;
-  padding: 10px;
+
+  padding: 10px 40px 10px 14px;
   border-radius: 5px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  /* give same width so the staggered is equal */
+  width: 88%;
   align-self: center;
 
+  color: hsl(300, 43%, 22%);
+  font-weight: 600;
   font-size: small;
 }
 
 .third-long-box {
   background-color: hsl(333, 80%, 95%);
-  width: 75%;
-  padding: 10px;
+
+  padding: 10px 40px 10px 14px;
   border-radius: 5px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  /* give same width so the staggered is equal */
+  width: 88%;
   align-self: flex-end;
 
+  color: hsl(300, 43%, 22%);
+  font-weight: 600;
   font-size: small;
 }
 
