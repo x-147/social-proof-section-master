@@ -25,16 +25,21 @@ body {
 .main-container {
   width: 73%;
   height: 500px;
+
+  display: grid;
 }
 
 /* TOP CONTAINER  */
 
 /* parent grid, for left and right box */
 .top-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
 }
 
 /* parent grid, for span and p */
 .left-box {
+  padding: 20px;
   color: hsl(300, 43%, 22%);
 }
 
@@ -55,6 +60,7 @@ body {
 
 /* parent grid, for 3 long containers */
 .right-box {
+  padding: 20px;
 }
 
 .icon-star {
@@ -100,6 +106,10 @@ body {
 
 /* grid parent for review cards */
 .bottom-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
