@@ -16,40 +16,25 @@ body {
   align-items: center;
   min-height: 100vh;
 
-  background-image: url('./images/bg-pattern-top-desktop.svg'),
+  /* background-image: url('./images/bg-pattern-top-desktop.svg'),
     url('./images/bg-pattern-bottom-desktop.svg');
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat; */
 }
 
+/* parent grid, with top-container and bottom container */
 .main-container {
   width: 73%;
   height: 500px;
-
-  display: flex;
-  flex-direction: column;
 }
 
 /* TOP CONTAINER  */
 
-/* parent for left and right box */
+/* parent grid, for left and right box */
 .top-container {
-  flex: 1;
-
-  display: flex;
-
-  /* to see layout */
-  /* border: 0.1px solid black; */
 }
 
+/* parent grid, for span and p */
 .left-box {
-  margin: 20px 5px 20px 20px;
-  width: 430px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-
   color: hsl(300, 43%, 22%);
 }
 
@@ -57,9 +42,6 @@ body {
   font-size: xx-large;
   font-weight: 700;
   line-height: 2rem;
-  /* this is ideal? */
-  width: 50%;
-  opacity: 0.85;
 }
 
 .left-box p {
@@ -69,18 +51,10 @@ body {
   opacity: 0.6;
   text-align: start;
   /* this is ideal? */
-  width: 75%;
 }
 
+/* parent grid, for 3 long containers */
 .right-box {
-  margin: 20px 0px 20px 0px;
-  /* absolute value prevents right box from shrinking */
-  width: 430px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.2rem;
 }
 
 .icon-star {
@@ -89,15 +63,17 @@ body {
 }
 
 .star-container {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 }
 
 .first-long-box > span,
 .second-long-box > span,
 .third-long-box > span {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 }
 
+/* children for grid parent right box */
+/* flex parent for star container, short review */
 .first-long-box,
 .second-long-box,
 .third-long-box {
@@ -113,64 +89,17 @@ body {
 
   /* absolute value prevents long box from shrinking */
   /* give same width along with align items for stagger */
-  width: 280px;
+  /* width: 280px; */
 
   color: hsl(300, 43%, 22%);
   font-weight: 600;
   font-size: small;
 }
 
-/* stagger the boxes */
-
-.first-long-box {
-  align-self: start;
-}
-
-.second-long-box {
-  align-self: center;
-}
-
-.third-long-box {
-  align-self: flex-end;
-}
-
 /* BOTTOM CONTAINER  */
 
+/* grid parent for review cards */
 .bottom-container {
-  /* fixed height to allow flex movements within the height? */
-  height: 250px;
-
-  display: flex;
-  /* this is leaving tiny space between card and parent */
-  justify-content: space-around;
-  /* for consistent spacing on wrap, desired effect 
-  only in conjunction with space-around or space-evenly
-  */
-  gap: 20px;
-
-  flex: 1;
-  flex-wrap: wrap;
-
-  /* to see layout */
-  /* border: 0.1px solid black; */
-}
-
-.card-container-one {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-
-.card-container-two {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card-container-three {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
 }
 
 .card {
@@ -223,47 +152,4 @@ body {
   font-size: small;
   font-weight: 400;
   line-height: 1rem;
-}
-
-@media (max-width: 944px) {
-  body {
-    overflow: scroll;
-  }
-
-  .top-container {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .left-box {
-    width: 275px;
-  }
-
-  .right-box {
-    width: 275px;
-  }
-
-  .left-box span {
-    width: auto;
-  }
-
-  .left-box p {
-    width: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-image: url('./images/bg-pattern-top-mobile.svg'),
-      url('./images/bg-pattern-bottom-mobile.svg');
-    background-repeat: no-repeat, no-repeat;
-  }
-
-  .first-long-box,
-  .second-long-box,
-  .third-long-box {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }
